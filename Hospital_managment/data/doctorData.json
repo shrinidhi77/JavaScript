@@ -1,0 +1,6 @@
+[
+  { "doctorName": "Dr. John Smith", "hospitalLocation": "New York", "image": "../../assets/doctors/doctor_1.jpg", "Name": "John Smith", "Title": "Cardiologist", "spc": "Cardiology" },
+  { "doctorName": "Dr. Emily Johnson", "hospitalLocation": "Los Angeles", "image": "../../assets/doctors/doctor_2.jpg", "Name": "Emily Johnson", "Title": "Dermatologist", "spc": "Dermatology" },
+  { "doctorName": "Dr. Michael Brown", "hospitalLocation": "Chicago", "image": "../../assets/doctors/doctor_3.jpg", "Name": "Michael Brown", "Title": "Orthopedic Surgeon", "spc": "Orthopedics" },
+  { "doctorName": "Dr. Sarah Davis", "hospitalLocation": "Houston", "image": "../../assets/doctors/doctor_1.jpg", "Name": "Sarah Davis", "Title": "Pediatrician", "spc": "Pediatrics" }
+]

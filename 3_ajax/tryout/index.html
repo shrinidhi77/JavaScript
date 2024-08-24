@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talent Cultural Event Winners</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Optional Bootstrap theme -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap-theme.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      .winner-card {
+        margin: 20px 0;
+      }
+      .winner-card h3 {
+        font-size: 1.8em; /* 18px */
+      }
+      .winner-card p {
+        font-size: 1.3em; /* 13px */
+      }
+      .winner-card span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body onload="loadWinners()">
+    <div class="container">
+      <h1 class="text-center mt-4">Talent Cultural Event Winners</h1>
+      <div id="winnersList" class="row justify-content-center">
+        <!-- Winner details will be loaded here -->
+      </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

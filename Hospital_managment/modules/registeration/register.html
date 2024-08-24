@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7" style="margin-top:6px;">
+                <br />
+                <img src="../../assets/register.webp" class="img-fluid" alt="Registration Image">
+            </div>
+            <div class="col-sm-3 offset-sm-1 text-center">
+                <form class="form-horizontal" role="form" onsubmit="setUserValue(event)">
+                    <br />
+                    <p><span style="font-weight:bold; font-size:18px;">SIGN UP</span></p>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" id="firstName" class="form-control" placeholder="Enter your first name"
+                                onkeyup="validateFName()">
+                            <div style='font-size:small;color:red' id='firstNameMessage'></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="text" id="lastName" class="form-control" placeholder="Enter your last name"
+                                onkeyup="validateLName()">
+                            <div style='font-size:small;color:red' id='lastNameMessage'></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="tel" id="mobile" class="form-control" placeholder="Enter your mobile number"
+                                onkeyup="validateMobile()">
+                            <div style='font-size:small;color:red' id='mobileMessage'></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address"
+                                onkeyup="validateEmail()">
+                            <div style='font-size:small;color:red' id='emailMessage'></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="password" id="password" class="form-control" placeholder="Enter your password"
+                                onkeyup="validatePassword()">
+                            <div style='font-size:small;color:red' id='passwordMessage'></div>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" id="submit" value="Create account" class="btn btn-primary"
+                            style="font-weight:bold;font-size:15px; margin-top:16px;">
+                        &nbsp;&nbsp;
+                        <input type="reset" id="reset" value="Reset" class="btn btn-secondary"
+                            style="margin-top:16px;font-weight:bold;font-size:15px;">
+                    </div>
+                    <div style="margin-top: 8px;">
+                        <span style="color:#2d2d30;">Existing user?</span>
+                        <a href="../login/login.html" style="font-weight: bold; font-size: 15px; color: grey;"
+                            id="submit">
+                            <span style="text-decoration: underline; color: #2d2d30;">Login</span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../registeration/register.js"></script>
+</body>
+
+</html>

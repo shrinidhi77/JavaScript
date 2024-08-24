@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurice Health Club - Holiday Package Booking</title>
+</head>
+
+<body>
+    <h1>Maurice Health Club - Holiday Package Booking</h1>
+
+    <form id="bookingForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="package">Select Package:</label>
+        <select id="package" name="package">
+            <option value="Ooty">Ooty</option>
+            <option value="Kodaikanal">Kodaikanal</option>
+        </select><br><br>
+
+        <button type="button" onclick="display()">Submit</button>
+    </form>
+
+    <p id="confirmationMessage"></p>
+
+    <script>
+        // Step 2: Create the display() function
+        function display() {
+            const packageSelected = document.getElementById("package").value;
+            const charge = amount();
+            if (charge > 0) {
+                const message = `You have selected ${packageSelected} and per person, you will be charged: ₹${charge}`;
+                document.getElementById("confirmationMessage").innerText = message;
+                alert(message);
+            }
+        }
+
+        // Step 3: Create the amount() function
+        function amount() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const packageSelected = document.getElementById("package").value;
+
+            if (firstName === "" || lastName === "") {
+                alert("Please enter a valid first and last name.");
+                document.getElementById("confirmationMessage").innerText = "Please enter a valid first and last name.";
+                return 0;
+            }
+
+            let charge = 0;
+
+            if (packageSelected === "Ooty") {
+                charge = 3500;
+            } else if (packageSelected === "Kodaikanal") {
+                charge = 2800;
+            }
+
+            return charge;
+        }
+    </script>
+</body>
+
+</html>

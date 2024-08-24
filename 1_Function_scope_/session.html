@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESSION SCHEDULER</title>
+    <style>
+        /* Add some basic styling for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        main {
+            flex: 1;
+            padding: 1em;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        button {
+            margin: 0.5em;
+        }
+
+        #output {
+            margin-top: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SESSION SCHEDULER</h1>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Credits</a>
+            <a href="#">Training</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Select a Professor</h2>
+            <button onclick="selectProfessor('Jon Snow')">Jon Snow</button>
+            <button onclick="selectProfessor('Samwell Tarly')">Samwell Tarly</button>
+        </section>
+        <section>
+            <h2>Select the Session to be Scheduled</h2>
+            <button onclick="selectSession('JavaScript')">JavaScript</button>
+            <button onclick="selectSession('Advanced JavaScript')">Advanced JavaScript</button>
+        </section>
+        <div id="output"></div>
+    </main>
+    <footer>
+        copyright © xyz.Ltd 2017
+    </footer>
+
+    <script>
+        // Global variables to store selected professor and session
+        let selectedProfessor = '';
+        let selectedSession = '';
+
+        // Function to handle professor selection
+        function selectProfessor(professor) {
+            selectedProfessor = professor;
+            selectedSession = ''; // Reset session
+            document.getElementById('output').style.display = 'none'; // Hide output
+        }
+
+        // Function to handle session selection
+        function selectSession(session) {
+            selectedSession = session;
+            if (selectedProfessor) {
+                document.getElementById('output').innerHTML = `Professor ${selectedProfessor} will take the ${selectedSession} session.`;
+                document.getElementById('output').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

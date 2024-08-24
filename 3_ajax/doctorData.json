@@ -1,0 +1,7 @@
+[
+    { "doctorName": "Dr. John Smith", "hospitalLocation": "New York" },
+    { "doctorName": "Dr. Emily Johnson", "hospitalLocation": "Los Angeles" },
+    { "doctorName": "Dr. Michael Brown", "hospitalLocation": "Chicago" },
+    { "doctorName": "Dr. Sarah Davis", "hospitalLocation": "Houston" }
+  ]
+  

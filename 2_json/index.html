@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurice GOT TALENT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .container {
+            padding: 2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 1em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .judge {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+        }
+
+        .judge h2 {
+            margin-top: 0;
+        }
+
+        .judge p {
+            margin: 0.5em 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Maurice GOT TALENT</h1>
+        <p>Discover the categories and meet our judges!</p>
+    </header>
+    <div class="container">
+        <h2>Categories</h2>
+        <table id="categories-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Category rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <h2>About Judges</h2>
+        <div id="judges-container">
+            <!-- Judge details will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Categories JSON data
+        const categories = [
+            { "id": 1, "name": "Singing", "description": "Show off your vocal talents." },
+            { "id": 2, "name": "Dancing", "description": "Show your best dance moves." },
+            { "id": 3, "name": "Comedy", "description": "Make everyone laugh." }
+        ];
+
+        // Judges JSON data
+        const judges = [
+            { "id": 1, "name": "John Doe", "expertise": "Music", "bio": "John is a professional singer with 10 years of experience." },
+            { "id": 2, "name": "Jane Smith", "expertise": "Dance", "bio": "Jane is a professional dancer and choreographer." },
+            { "id": 3, "name": "Alice Johnson", "expertise": "Comedy", "bio": "Alice is a stand-up comedian known for her witty humor." }
+        ];
+
+        // Function to display categories in a table
+        function displayCategories() {
+            const categoriesTable = document.getElementById('categories-table').getElementsByTagName('tbody')[0];
+            categories.forEach(category => {
+                const row = categoriesTable.insertRow();
+                row.innerHTML = `
+                    <td>${category.id}</td>
+                    <td>${category.name}</td>
+                    <td>${category.description}</td>
+                `;
+            });
+        }
+
+        // Function to display judges
+        function displayJudges() {
+            const judgesContainer = document.getElementById('judges-container');
+            judges.forEach(judge => {
+                const judgeElement = document.createElement('div');
+                judgeElement.className = 'judge';
+                judgeElement.innerHTML = `
+                    <h2>${judge.name}</h2>
+                    <p>Expertise: ${judge.expertise}</p>
+                    <p>${judge.bio}</p>
+                `;
+                judgesContainer.appendChild(judgeElement);
+            });
+        }
+
+        // Call the functions to display data on page load
+        displayCategories();
+        displayJudges();
+    </script>
+</body>
+
+</html>
