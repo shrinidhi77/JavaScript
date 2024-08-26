@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* * {
+            box-sizing: border-box;
+        } */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            position: relative;
+            width: 98%;
+            height: 30px;
+            background: #ccc;
+            padding: 13px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            /* Removes any default margin */
+        }
+
+        nav ul li {
+            display: inline;
+            /* Displays list items inline */
+            margin-right: 15px;
+            /* Adds spacing between the items */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            /* Removes the underline from links */
+            color: black;
+            /* Sets the link color */
+            padding: 5px 10px;
+            /* Adds padding to the links for better spacing */
+        }
+
+        nav ul li a:hover {
+            background-color: #999;
+            /* Changes background on hover */
+        }
+
+        /* article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+          
+        } */
+
+        /* Clear floats after the columns */
+        section::after {
+
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* style */
+
+        /* .form-container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .form-container input,
+        .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        } */
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #dff0d8;
+            border: 1px solid #d0e9c6;
+            color: #3c763d;
+            border-radius: 5px;
+            display: none;
+            /* Hide initially */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Maurice Session Scheduler</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Registeration</a></li>
+            <li><a href="#">Raise a request</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" style="float: right">Help me</a></li>
+        </ul>
+    </nav>
+    <section style="display: flex; justify-content: space-between; background-color: #e0e0e0; padding: 20px;">
+        <!-- Left side: Article and Registration Form combined -->
+        <div style="flex: 1; margin-right: 10px; margin-left: 10px;">
+            <!-- Article -->
+            <article>
+                <p id="address"></p>
+            </article>
+
+            <!-- Registration Form -->
+            <div class="form-container">
+                <h2>Employee Registration</h2>
+                <form id="registrationForm">
+                    <label for="employeeId">Employee ID:</label><br>
+                    <input type="text" id="employeeId" name="employeeId" required><br><br>
+
+                    <label for="employeeName">Employee Name:</label><br>
+                    <input type="text" id="employeeName" name="employeeName" required><br><br>
+
+                    <label for="status">Status:</label><br>
+                    <select id="status" name="status">
+                        <option value="In Project">In Project</option>
+                        <option value="Bench">Bench</option>
+                    </select><br><br>
+
+                    <button type="submit">Register</button>
+                </form>
+                <div id="successMessage" class="success-message"></div>
+            </div>
+        </div>
+
+        <!-- Right side: Registered Details -->
+        <div style="flex: 1; margin-right: 10px;">
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th colspan="2">Course Scheduler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2014, <a href="">Contact Us</a> </a>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

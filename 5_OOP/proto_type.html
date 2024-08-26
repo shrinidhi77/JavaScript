@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Doctor(name, specialization) {
+            this.name = name,
+                this.specialization = specialization,
+                this.availability = function () {
+                    return this.name + "From Morning 9 A.M - 11 A.M"
+                }
+        }
+        // Doctor object creation. 
+        doctor1 = new Doctor("Tom", "ENT");
+        //code to access the prototype property
+        console.log(Doctor.prototype);
+        //code to add hospital attribute dynamically through prototype object
+        Doctor.prototype.hospitalLocation = "Chennai";
+        console.log(Doctor.prototype.hospitalLocation);
+
+
+        // Prototype Object developer can add new attributes , delete attributes and even define new method without modifying the declared structure.
+        function Doctor() { }
+        // code to add new attributes and method
+        Doctor.prototype.name = "Tom";
+        Doctor.prototype.specialization = "ENT";
+        Doctor.prototype.availability = function () { return this.name + " " + "From Morning 9 A.M - 11 A.M" }
+        // Doctor object creation. 
+        doctor1 = new Doctor();
+        //code to invoke availability method
+        console.log(doctor1.availability());
+        // code to delete the attribute
+        console.log(delete doctor1.name);
+
+
+    </script>
+</body>
+
+</html>

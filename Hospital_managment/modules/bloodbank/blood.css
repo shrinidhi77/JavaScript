@@ -1,0 +1,58 @@
+/* Container for Blood Stock Section */
+#blood-stock {
+    background-color: #e6e6e6; /* Gray background */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Title Styling */
+#blood-stock .section-title {
+    color: #001a33; /* Dark blue color */
+    font-family: Verdana, sans-serif;
+    font-size: 20px; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Table Styling */
+#blood-stock table.table-custom {
+    background-color: white;
+    width: 100%;
+    border-collapse: collapse; /* Removes space between cells */
+    border: 1px solid #ccc; /* Add border around the table */
+}
+
+#blood-stock th,
+#blood-stock td {
+    padding: 15px; /* Padding for cells */
+    vertical-align: middle;
+    border: 1px solid #ccc; /* Light border for cells */
+}
+
+#blood-stock th {
+    background-color: #f2f2f2; /* Light gray background for header */
+    font-weight: bold;
+    color: #001a33; /* Dark blue text */
+}
+
+#blood-stock td {
+    background-color: #ffffff; /* White background for table cells */
+    color: #333; /* Text color */
+}
+
+/* Table alignment and responsiveness */
+#blood-stock .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blood-stock .col-lg-8,
+#blood-stock .col-md-10,
+#blood-stock .col-sm-12 {
+    padding: 0;
+}
+
+#blood-stock .table-custom {
+    margin-bottom: 0;
+}

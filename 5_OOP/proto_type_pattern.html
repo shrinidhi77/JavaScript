@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // function Doctor(name, specialization) {
+        //     this.name = name,
+        //         this.specialization = specialization,
+        //         this.availability = function () {
+        //             return this.name + " " + "From Morning 9 A.M - 11 A.M"
+        //         }
+        // }
+        // function SpecializedDoctor(hospitalLocation) {
+        //     this.hospitalLocation = hospitalLocation;
+        // }
+        // //code for establishing inheritance between SpecializedDoctor and Doctor
+        // SpecializedDoctor.prototype = Doctor.prototype;
+        // //code to create child object and invoking its parent function
+        // sDoctor1 = new SpecializedDoctor("ABC Hospital");
+        // console.log(sDoctor1.hospitalLocation);
+        // console.log(sDoctor1);
+        // console.log(sDoctor1.name);
+        // console.log(sDoctor1.availability());
+
+
+        function Doctor(name, specialization) {
+            this.name = name;
+            this.specialization = specialization;
+            this.availability = function () {
+                return this.name + " " + "From Morning 9 A.M - 11 A.M"
+            }
+        }
+        function SpecializedDoctor(name, specialization, hospitalLocation) {
+            //code to invoke parent class
+            Doctor.call(this, name, specialization);
+            this.hospitalLocation = hospitalLocation;
+        }
+        //code for establishing inheritance between SpecializedDoctor and Doctor
+        SpecializedDoctor.prototype = Doctor.prototype;
+        //code to create child object and invoking its parent function
+        sDoctor1 = new SpecializedDoctor("Jim", "Dental", "ABC Hospital");
+        console.log(sDoctor1.name);
+        console.log(sDoctor1.availability());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Container (Blood Section) -->
+    <div class="container" id="blood-stock"
+        style="margin-top: 20px; background-color: #e6e6e6; padding: 20px; border-radius: 10px;">
+        <p class="section-title text-center">BLOOD STOCK</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <table class="table table-bordered text-center table-custom">
+                    <thead>
+                        <tr>
+                            <th>Blood group</th>
+                            <th>Cryoprecipitate value</th>
+                            <th>Frozen plasma value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B+</td>
+                            <td id="v1"></td>
+                            <td id="v7"></td>
+                        </tr>
+                        <tr>
+                            <td>B-</td>
+                            <td id="v2"></td>
+                            <td id="v8"></td>
+                        </tr>
+                        <tr>
+                            <td>A+</td>
+                            <td id="v3"></td>
+                            <td id="v9"></td>
+                        </tr>
+                        <tr>
+                            <td>A-</td>
+                            <td id="v4"></td>
+                            <td id="v10"></td>
+                        </tr>
+                        <tr>
+                            <td>O+</td>
+                            <td id="v5"></td>
+                            <td id="v11"></td>
+                        </tr>
+                        <tr>
+                            <td>O-</td>
+                            <td id="v6"></td>
+                            <td id="v12"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../bloodbank/blood.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

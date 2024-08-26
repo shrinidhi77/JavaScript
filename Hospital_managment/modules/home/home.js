@@ -78,3 +78,8 @@ function proceedAppointment(event) {
     console.log("hi i am here not allowing u  ");
   }
 }
+
+function bloodAvailability(event) {
+  event.preventDefault();
+  location.assign("../bloodbank/blood.html");
+}

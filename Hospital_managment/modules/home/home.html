@@ -10,14 +10,16 @@
 </head>
 
 <body>
-    <!-- features of the website -->
-    <div id="specialties" class="container" style="margin-top:20px">
-        <p class="text-center">
-            <span style="font-weight:bold; font-size:17px;">SPECIALTIES</span>
-        </p>
-        <a href='../speciality/spcl.html' style="font-size:15px; color:#001a33;font-weight:bold;"><u><i>More</i></u></a>
+    <!-- Features of the website -->
+    <div id="specialties" class="container mt-4">
+        <p class="text-center font-weight-bold" style="font-size: 17px;">SPECIALTIES</p>
+        <div class="text-right mb-3">
+            <a href="../speciality/spcl.html" class="text-primary font-weight-bold" style="font-size: 15px;">
+                <u><i>More</i></u>
+            </a>
+        </div>
 
-        <div class="row slideanim" style="margin-top:20px">
+        <div class="row slideanim">
             <div class="col-sm-4 text-center">
                 <div class="img-container">
                     <img src="../../assets/spec/accident.jpg" alt="Accident and Trauma">
@@ -37,7 +39,8 @@
                 <p>Cardiology</p>
             </div>
         </div>
-        <div class="row slideanim">
+
+        <div class="row slideanim mt-4">
             <div class="col-sm-4 text-center">
                 <div class="img-container">
                     <img src="../../assets/spec/neuro.jpg" alt="Neurology">
@@ -60,17 +63,15 @@
     </div>
 
     <!-- Container (Doctors Section) -->
-    <div id="doctors" class="container" style="background-color:#e6e6e6; margin-top:40px; margin-bottom:40px"
-        align="center">
-        <p> <span style="font-weight:bold; font-size:17px;">OUR DOCTORS</span></p>
-        <div align="center">
-            <table id="tableMain" width="90%" style="font-size:12px;margin-bottom: 20px;" align="center"
-                class="table-responsive">
-                <tr align="center">
+    <div id="doctors" class="container bg-light mt-5 mb-5 text-center">
+        <p class="font-weight-bold" style="font-size: 17px;">OUR DOCTORS</p>
+        <div class="table-responsive">
+            <table id="tableMain" class="table table-borderless" style="font-size: 12px;">
+                <tr>
                     <td id="data0"></td>
                     <td id="data1"></td>
                 </tr>
-                <tr align="center">
+                <tr>
                     <td id="data2"></td>
                     <td id="data3"></td>
                 </tr>
@@ -79,50 +80,65 @@
     </div>
 
     <!-- Container (Appointment Section) -->
-    <div id="appointment" class="container" style="background-color:#e6e6e6; padding-bottom: 15px; margin-bottom: 20px;" align="center">
-        <div class="text-center">
-            <p><span style="font-weight:bold; font-size:17px;">APPOINTMENT</span><br /><br />
-                Take an appointment online</p>
-        </div>
-        <table style="background-color:#f2f2f2;" align="center" width="100%">
-            <tr>
-                <td><br /><br />
-                    <form name="doc"  align="center" onsubmit="proceedAppointment(event)">
-                        Location: &nbsp;
-                        <select id="Location" required>
-                            <option value="">--Select--</option>
-                            <option value="Bangalore">Bangalore</option>
-                            <option value="Chennai">Chennai</option>
-                            <option value="Hyderabad">Hyderabad</option>
-                            <option value="Jaipur">Jaipur</option>
-                            <option value="Mangalore">Mangalore</option>
-                            <option value="Mysore">Mysore</option>
-                            <option value="Trivandrum">Trivandrum</option>
-                        </select>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        Department to visit:&nbsp;
-                        <select id="dpt" required>
-                            <option value="">--Select--</option>
-                            <option value="Dental">Dental</option>
-                            <option value="ENT">ENT</option>
-                            <option value="Physician">Physician</option>
-                            <option value="Opthalmology">Opthalmology</option>
-                            <option value="Cardiology">Cardiology</option>
-                            <option value="Neurology">Neurology</option>
-                            <option value="Gastrointestinal">Gastrointestinal</option>
-                        </select>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        Date :&nbsp; <input id="dateField" type="date" min="2014-01-01" required />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        Time :&nbsp; <input id="time" type="time" name="TIME" required /><br />
-                        <br />
-                        <button type="submit" id="submit" class="btn btn-default" value="Proceed">Proceed</button> 
-                    </form><br />
-                </td>
-            </tr>
-        </table>
+    <div id="appointment" class="container bg-light pb-3 mb-4 text-center">
+        <p class="font-weight-bold" style="font-size: 17px;">APPOINTMENT</p>
+        <p>Take an appointment online</p>
+        <form name="doc" class="form-inline justify-content-center" onsubmit="proceedAppointment(event)">
+            <div class="form-group">
+                <label for="Location">Location: &nbsp;</label>
+                <select id="Location" class="form-control mr-3" required>
+                    <option value="">--Select--</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Mangalore">Mangalore</option>
+                    <option value="Mysore">Mysore</option>
+                    <option value="Trivandrum">Trivandrum</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dpt">Department to visit:&nbsp;</label>
+                <select id="dpt" class="form-control mr-3" required>
+                    <option value="">--Select--</option>
+                    <option value="Dental">Dental</option>
+                    <option value="ENT">ENT</option>
+                    <option value="Physician">Physician</option>
+                    <option value="Ophthalmology">Ophthalmology</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Gastrointestinal">Gastrointestinal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateField">Date :&nbsp;</label>
+                <input id="dateField" type="date" class="form-control mr-3" required />
+            </div>
+            <div class="form-group">
+                <label for="time">Time :&nbsp;</label>
+                <input id="time" type="time" class="form-control" required />
+            </div>
+            <button type="submit" id="submit" class="btn btn-default mt-3" value="Proceed">Proceed</button>
+        </form>
     </div>
 
+    <!-- Blood bank -->
+    <div id="blood" class="container text-center mb-5 bg-light">
+        <h2 class="font-weight-bold text-left" style="padding-right:250px; font-size:17px;">BLOOD BANK</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="../../assets/blood_bank.jpg" class="img-fluid" alt="Blood Bank">
+            </div>
+            <div class="col-sm-8 slideanim text-left">
+                <p>Blood is a specialized bodily fluid that delivers necessary substances to the body’s cells such as
+                    nutrients and oxygen, and transports waste products away from those same cells. Blood comprises more
+                    than 8% of the body weight of a healthy individual. On average, every adult person has about 5 to 6
+                    liters of blood. The major component of blood is a fluid called plasma in which are suspended
+                    cellular elements. These are Red Blood Cells or RBCs, White Blood Cells or WBCs, and platelets.</p>
+                <button class="btn btn-default float-right" onclick="bloodAvailability(event)">Check blood availability</button>
+            </div>
+        </div>
+    </div>
 
     <script src="../home/home.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

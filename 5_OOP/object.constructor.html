@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let us create Doctor object using new keyword with the help of JavaScript built-in Object class.
+        doctor = new Object();
+        doctor.name = "shrinidhi";
+        doctor.specialisation = "ENT"
+
+        console.log(doctor.name)
+        console.log(doctor["specialisation"])
+        console.log(doctor["name"])
+
+        // Now let us create a customize Doctor object to implement same concept.
+        function Doctor(name, spec) {
+            this.name = name;
+            this.specialisation = spec;
+
+            this.availability = function () {
+                return this.name + " " + "From Morning 9 A.M - 11 A.M"
+            }
+        }
+
+        doctor = new Doctor("shri", "ENT");
+        console.log(doctor.name)
+        console.log(doctor["specialisation"])
+        console.log(doctor["availability"]())
+        console.log(doctor.availability())
+
+
+
+    </script>
+</body>
+
+</html>

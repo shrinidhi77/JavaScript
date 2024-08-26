@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Doctor(name) {
+        //     //private attribute declaration
+        //     var doctorName = name;
+        //     this.doctorName = name;
+        //     //getter method declaration
+        //     this.getName = function () {
+        //         return doctorName;
+        //     }
+        //     //setter method declaration
+        //     this.setName = function (name) {
+        //         doctorName = name;
+        //     }
+        //     this.availability = function () {
+        //         return this.doctorName + " " + "From Morning 9 A.M - 11 A.M"
+        //     }
+        // }
+        // // Doctor object creation and invoking getter and setter methods. 
+        // doctor1 = new Doctor("Tom");
+        // console.log(doctor1.getName());
+        // doctor1.setName("Jim");
+        // console.log(doctor1.doctorName);
+        // console.log(doctor1.getName());
+        // console.log(doctor1.availability());
+
+
+        // testing between the public and private properties
+        function Doctor(name, specialization) {
+            // Private variable
+            var name = name;
+            var specialization = specialization;
+
+            // Public properties
+            this.name = "Public " + name;
+            this.specialization = "Public " + specialization;
+
+            this.getPrivateName = function () {
+                return name; // Accesses the private variable
+            };
+
+            this.getPublicName = function () {
+                return this.name; // Accesses the public property
+            };
+
+            this.getPrivateSpecialization = function () {
+                return specialization; // Accesses the private variable
+            };
+
+            this.getPublicSpecialization = function () {
+                return this.specialization; // Accesses the public property
+            };
+        }
+
+        let doctor1 = new Doctor("Tom", "Cardiology");
+
+        console.log(doctor1.getPrivateName()); // "Tom"
+        console.log(doctor1.getPublicName()); // "Public Tom"
+
+        console.log(doctor1.getPrivateSpecialization()); // "Cardiology"
+        console.log(doctor1.getPublicSpecialization()); // "Public Cardiology"
+
+    </script>
+</body>
+
+</html>
