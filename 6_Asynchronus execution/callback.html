@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser</title>
+</head>
+
+<body onLoad="">
+    <h1> JavaScript Execution</h1>
+</body>
+<script type="text/javascript">
+
+    // //      call back function 
+    // function fetchData(callback) {
+    //     console.log("Fetching data");
+    //     setTimeout(function () {
+    //         let data = { id: 1, name: "shrinidhi" };
+    //         callback(data);
+    //     }, 2000);
+
+    // }
+
+    // function processData(data) {
+    //     console.log("Processing data", data);
+    // }
+
+    // fetchData(processData);
+
+    //      call back hell
+    function firstLoad(callback) {
+        setTimeout(function () {
+            console.log("setTimeout First");
+            callback();
+        },2000)
+    }
+
+    function secondLoad(callback) {
+        setTimeout(function () {
+            console.log("setTimeout Second");
+            callback();
+        },2000)
+    }
+
+    function thirdLoad(callback) {
+        setTimeout(function () {
+            console.log("setTimeout Third");
+            callback();
+        },2000)
+    }
+
+    firstLoad(() => { console.log("calback First");
+        secondLoad(() => { console.log("calback Second");
+            thirdLoad(() => { console.log("calback Third");
+                console.log("calback finished");
+            });
+        });
+    });
+
+
+</script>
+
+
+</html>

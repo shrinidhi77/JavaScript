@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Join</title>
+</head>
+
+<body>
+    <!-- Container (Join Section) -->
+    <div id="join" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7" style="margin-top: 6px;">
+                <br /> <img src="../../assets/join.jpg" placeholder="Image is not available">
+            </div>
+            <div class="col-sm-4">
+                <br />
+                <form action="javascript:join()">
+                    <p>
+                        <span style="font-weight: bold; align: left; font-size: 17px;">JOIN US</span>
+                    </p>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your Name"
+                        style="margin-top: 16px;">
+                    <input type="email" id="email" class="form-control" placeholder="Enter your Email address"
+                        style="margin-top: 16px; " onkeyup='validateEmail();'>
+                    <div style='font-size: small; color: red' id='emailMessage'>
+                    </div>
+                    <input type="tel" id="mobile" class="form-control" placeholder="Enter your Mobile Number"
+                        style="margin-top: 16px; " onkeyup='validateMobile();'>
+                    <div style='font-size: small; color: red' id='mobileMessage'></div>
+                    <input class="btn btn-primary "
+                        style="display: block; width: 99%; font-weight: bold; font-size: 15px; margin-top: 16px;"
+                        type="submit" id="submit" /> <br />
+                    <div style='font-size: bold;' id='message'></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./join.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser</title>
+</head>
+
+<body onLoad="">
+    <h1> JavaScript Execution</h1>
+</body>
+<script type="text/javascript">
+
+    //     Promise
+    function fetchData() {
+        return new Promise((resolve, reject) => {
+            console.log("Fetching data...");
+
+            setTimeout(function () {
+                let success = true;  // Simulate success/failure
+
+                if (success) {
+                    let data = { name: "John", age: 30 };
+                    console.log("Data fetched");
+                    resolve(data);  // Resolve the promise with data
+                } else {
+                    reject("Failed to fetch data");  // Reject the promise with an error message
+                }
+            }, 2000);
+        });
+    }
+
+    fetchData()
+        .then((data) => {
+            console.log("Processing data:", data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+
+
+    // //      Promise chaining 
+    // function firstTask() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             console.log("First task complete");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+
+    // function secondTask() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             console.log("Second task complete");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+
+    // function thirdTask() {
+    //     return new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             console.log("Third task complete");
+    //             resolve();
+    //         }, 1000);
+    //     });
+    // }
+
+    // firstTask()
+    //     .then(secondTask)
+    //     .then(thirdTask)
+    //     .then(() => {
+    //         console.log("All tasks complete");
+    //     });
+
+
+</script>
+
+
+</html>

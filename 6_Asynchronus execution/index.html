@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Browser</title>
+</head>
+
+<body onLoad="">
+    <h1> JavaScript Execution</h1>
+</body>
+<script type="text/javascript">
+
+    // console.log("Before For loop execution");
+    // for (var i = 0; i < 2; i++) {
+    //     setTimeout(function () {
+    //         console.log("setTimeout message");
+    //         func1();
+    //     },);
+    //     func2();
+    // }
+    // console.log("After For loop execution");
+    // function func1() {
+    //     console.log("Am in func1");
+    // }
+    // function func2() {
+    //     console.log("Am in func2");
+    // }
+
+
+    console.log("Before For loop execution");
+    var counter = 0;
+    var t;
+    t = setInterval(function () {
+        console.log("setTimeout message");
+        func1();
+        counter += 1;
+        if (counter >= 3) {
+            clearInterval(t);
+        }
+    }, 1000);
+    func2();
+    console.log("After For loop execution");
+    function func1() {
+        console.log("Am in func1");
+    }
+    function func2() {
+        console.log("Am in func2");
+    }
+
+
+
+</script>
+
+
+</html>

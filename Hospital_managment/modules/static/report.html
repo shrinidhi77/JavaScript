@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <!-- Container (Report Section) -->
+    <div id="report" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7" style="margin-top: 8px;">
+                <br />  <img src="../../assets/report.jpg"  placeholder="Image is not available">
+            </div>
+            <br/>
+            <div class="col-sm-4">
+                <br/>
+                <br/>
+                <form action="javascript:report()">
+                    <p>
+                        <span style="font-weight: bold; font-size: 17px; align: left;">
+                            LAB REPORT</span>
+                    </p>
+                    <input type="text" id="patientId" class="form-control" placeholder="Enter your patient ID"
+                        style="margin-top: 16px;">
+                    <input type="email" id="email" class="form-control" placeholder="Enter registered email address"
+                        style="margin-top: 16px;">
+                    <div style="padding-right: 200px;">
+                        <span>
+                            <input class="btn btn-primary "
+                                style="font-weight: bold; font-size: 15px; margin-top: 16px;" type="submit" id="submit"
+                                value="Submit" /> &nbsp;&nbsp;
+                            <input type="reset" class="btn btn-primary "
+                                style="margin-top: 16px; font-weight: bold; font-size: 15px;" type="reset" id="reset"
+                                value="Reset" />
+                        </span>
+                    </div>
+                    <br />
+                    <div style='font-size: bold;' id='message'></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./report.js"></script>
+</body>
+
+</html>

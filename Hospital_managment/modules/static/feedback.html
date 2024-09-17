@@ -1,0 +1,62 @@
+<!-- Container (feedback Section) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Feedback</title>
+</head>
+
+<body>
+    <div id="feedback" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7" style="margin-top: 36px;">
+                <br/> <img src="../../assets/feedback.jpg" placeholder="Image is not available">
+            </div>
+            <div class="col-sm-4">
+                <br/>
+                <br/>
+                <form action="javascript:feedback()">
+                    <p>
+                        <span style="font-weight: bold; font-size: 17px; align: left">FEEDBACK
+                            FORM</span>
+                    </p>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                        style="margin-top: 16px;" onkeyup='validateName()'>
+                    <div style='font-size: small; color: red' id='nameMessage'></div>
+                    <input type="email" style="margin-top: 16px;" id="email" class="form-control"
+                        placeholder="Enter your email address" onkeyup='validateEmail();'>
+                    <div style='font-size: small; color: red' id='emailMessage'>
+                    </div>
+                    <input type="tel" id="mobile" class="form-control" style="margin-top: 16px;"
+                        placeholder="Enter your mobile Number" onkeyup='validateMobile();'>
+                    <div style='font-size: small; color: red' id='mobileMessage'></div>
+                    <textarea rows=3 cols=44 id="feedbackMessage"
+                        style="margin-top: 16px;">Please enter your feedback here</textarea>
+                    <div style="padding-right: 200px;">
+                        <span>
+                            <input class="btn btn-primary "
+                                style="font-weight: bold; font-size: 15px; margin-top: 16px;" type="submit" id="submit"
+                                value="Submit" /> &nbsp;&nbsp;
+                            <input type="reset" class="btn btn-primary"
+                                style="margin-top: 16px; font-weight: bold; font-size: 15px;" type="reset" id="reset"
+                                value="Reset" />
+                        </span>
+                    </div>
+                    <br />
+                    <div style='font-size: bold;' id='message'></div>
+                </form>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./feedback.js"></script>
+</body>
+
+</html>
