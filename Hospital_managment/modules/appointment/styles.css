@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Specialties Section */
+#specialties img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#specialties p {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Container styles */
+#specialties .container {
+  margin-top: 20px;
+}
+
+/* Centered text */
+#specialties p.text-center {
+  text-align: center;
+}
+
+/* Grid layout for the rows */
+#specialties .row {
+  display: grid;
+  gap: 20px;
+}
+
+/* For larger screens: 2x3 grid */
+@media (min-width: 768px) {
+  #specialties .row {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* For smaller screens: 1 column layout */
+@media (max-width: 767px) {
+  #specialties .row {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* Centering and styling each column */
+#specialties .col-sm-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ensures content starts at the top */
+  margin-bottom: 20px; /* Adds space between rows */
+}
+
+/* Image container with equal width and height */
+.img-container {
+  width: 100%;
+  max-width: 500px;
+  height: 250px; /* Fixed height for consistency */
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0; /* Placeholder background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Images styled to cover the container */
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: 10px; /* Matches container's rounded corners */
+}
+
+/* Paragraph styles */
+#specialties p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #001a33;
+  text-align: center;
+}
+
+/* Doctors Section */
+#doctors {
+  background-color: #e6e6e6;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#doctors p {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#tableMain {
+  width: 90%;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* Appointment Section */
+#appointment {
+  background-color: #e6e6e6;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#appointment p {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#appointment form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#appointment form .form-group {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* Blood Bank Section */
+#blood {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#blood h2 {
+  font-weight: bold;
+  padding-right: 250px;
+  font-size: 17px;
+  text-align: left;
+}
+
+#blood .img-fluid {
+  height: 180px;
+  width: 300px;
+  object-fit: cover;
+}
+
+#blood .slideanim {
+  text-align: left;
+}
+
+#blood button {
+  float: right;
+}
+
+/* Button Styles */
+.btn-default {
+  background-color: #001a33;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  background-color: #003366;
+}

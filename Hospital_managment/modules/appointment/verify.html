@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Appointment Section -->
+    <div id="appointment" class="container bg-light pb-3 mb-4 text-center">
+        <p class="font-weight-bold" style="font-size: 17px;">APPOINTMENT</p>
+        <p>Take an appointment online</p>
+        <form name="doc" class="form-inline justify-content-center" onsubmit="proceedAppointment(event)">
+            <div class="form-group">
+                <label for="Location">Location: &nbsp;</label>
+                <select id="Location" class="form-control mr-3" required>
+                    <option value="">--Select--</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Mangalore">Mangalore</option>
+                    <option value="Mysore">Mysore</option>
+                    <option value="Trivandrum">Trivandrum</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dpt">Department to visit:&nbsp;</label>
+                <select id="dpt" class="form-control mr-3" required>
+                    <option value="">--Select--</option>
+                    <option value="Dental">Dental</option>
+                    <option value="ENT">ENT</option>
+                    <option value="Physician">Physician</option>
+                    <option value="Ophthalmology">Ophthalmology</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Gastrointestinal">Gastrointestinal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateField">Date :&nbsp;</label>
+                <input id="dateField" type="date" class="form-control mr-3" required />
+            </div>
+            <div class="form-group">
+                <label for="time">Time :&nbsp;</label>
+                <input id="time" type="time" class="form-control" required />
+            </div>
+            <button type="submit" id="submit" class="btn btn-default mt-3" value="Proceed">Proceed</button>
+        </form>
+    </div>
+    
+    <script src="../appointment/appointment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

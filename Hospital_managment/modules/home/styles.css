@@ -1,174 +1,196 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: #001a33;
+  background-color: #f2f2f2;
+  font-family: verdana;
 }
 
-/* Specialties Section */
-#specialties img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-#specialties p {
-    font-weight: bold;
-    font-size: 16px;
-    margin: 0;
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Container styles */
-#specialties .container {
-    margin-top: 20px;
+footer {
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+}
+.navcontainer {
+  padding: 60px 30px;
+}
+.container {
+  padding: 60px 30px;
+}
+.person {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+}
+.person:hover {
+  border-color: #f1f1f1;
+}
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+  color: #001a33;
+}
+.carousel-indicators li {
+  border-color: rgba(45, 45, 48, 0.6);
+}
+.carousel-indicators li.active {
+  background-color: rgba(45, 45, 48, 0.6);
+}
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+.item span {
+  font-style: normal;
+}
+.panel {
+  border: 1px solid #001a33;
+  border-radius: 0 !important;
+}
+.carousel-caption {
+  max-width: 100%;
+  width: 89%;
+  background-color: rgba(45, 45, 30, 0.3);
+  left: 0;
+  height: 90px;
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+.bg-1 {
+  background: #2d2d30;
+  color: #bdbdbd;
+}
+.bg-1 h3 {
+  color: #fff;
+}
+.bg-1 p {
+  font-style: italic;
+}
+.list-group-item:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
 }
 
-/* Centered text */
-#specialties p.text-center {
-    text-align: center;
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
 }
-
-/* Grid layout for the rows */
-#specialties .row {
-    display: grid;
-    gap: 20px;
+.btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 0;
+  transition: 0.2s;
 }
-
-/* For larger screens: 2x3 grid */
-@media (min-width: 768px) {
-    #specialties .row {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.btn:hover,
+.btn:focus {
+  border: 1px solid #333;
+  color: #000;
 }
-
-/* For smaller screens: 1 column layout */
-@media (max-width: 767px) {
-    #specialties .row {
-        grid-template-columns: 1fr;
-    }
+.modal-header,
+h4,
+.close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
 }
-
-/* Centering and styling each column */
-#specialties .col-sm-4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Ensures content starts at the top */
-    margin-bottom: 20px; /* Adds space between rows */
+.modal-header,
+.modal-body {
+  padding: 40px 50px;
 }
-
-/* Image container with equal width and height */
-.img-container {
-    width: 100%;
-    max-width: 500px;
-    height: 250px; /* Fixed height for consistency */
-    position: relative;
-    overflow: hidden;
-    background: #f0f0f0; /* Placeholder background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px; /* Rounded corners */
+.nav-tabs li a {
+  color: #777;
 }
-
-/* Images styled to cover the container */
-.img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the container */
-    border-radius: 10px; /* Matches container's rounded corners */
+#googleMap {
+  width: 100%;
+  height: 400px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
-
-/* Paragraph styles */
-#specialties p {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #001a33;
-    text-align: center;
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  height: 10px;
 }
-
-/* Doctors Section */
-#doctors {
-    background-color: #e6e6e6;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+.navbar li a,
+.navbar .navbar-brand {
+  color: rgba(255, 255, 255, 0.6) !important;
 }
-
-#doctors p {
-    font-weight: bold;
-    font-size: 17px;
+.navbar-nav li a:hover {
+  color: #fff !important;
 }
-
-#tableMain {
-    width: 90%;
-    font-size: 12px;
-    margin-bottom: 20px;
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color: #29292c !important;
 }
-
-/* Appointment Section */
-#appointment {
-    background-color: #e6e6e6;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    text-align: center;
+.navbar-default .navbar-toggle {
+  border-color: transparent;
 }
-
-#appointment p {
-    font-weight: bold;
-    font-size: 17px;
+.open .dropdown-toggle {
+  color: #fff;
+  background-color: #555 !important;
 }
-
-#appointment form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.dropdown-menu li a {
+  color: #000 !important;
 }
-
-#appointment form .form-group {
-    margin-right: 20px;
-    margin-bottom: 10px;
+.dropdown-menu li a:hover {
+  background-color: red !important;
 }
-
-/* Blood Bank Section */
-#blood {
-    text-align: center;
-    margin-top: 20px;
+footer {
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
 }
-
-#blood h2 {
-    font-weight: bold;
-    padding-right: 250px;
-    font-size: 17px;
-    text-align: left;
+footer a {
+  color: #f5f5f5;
 }
-
-#blood .img-fluid {
-    height: 180px;
-    width: 300px;
-    object-fit: cover;
+footer a:hover {
+  color: #777;
+  text-decoration: none;
 }
-
-#blood .slideanim {
-    text-align: left;
+.form-control {
+  border-radius: 0;
 }
-
-#blood button {
-    float: right;
-}
-
-/* Button Styles */
-.btn-default {
-    background-color: #001a33;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.btn-default:hover {
-    background-color: #003366;
+textarea {
+  resize: none;
 }

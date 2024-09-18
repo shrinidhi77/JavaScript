@@ -6,142 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <!-- Features of the website -->
-    <div id="specialties" class="container mt-4">
-        <p class="text-center font-weight-bold" style="font-size: 17px;">SPECIALTIES</p>
-        <div class="text-right mb-3">
-            <a href="../speciality/spcl.html" class="text-primary font-weight-bold" style="font-size: 15px;">
-                <u><i>More</i></u>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #2d2d30; border: 10px solid ">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="font-size:19px; font-weight:bold;">Infy HMS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar"
+                aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../aboutus/about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../speciality/spcl.html">SPECIALTIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../doctors/doctors.html">OUR DOCTORS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../appointment/verify.html">APPOINTMENT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../bloodbank/blood.html">BLOODBANK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+
+    <div class="content">
+        <!-- Carousel -->
+        <div id="carouselExample" class="carousel slide" style="" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="col-lg-4 carousel-item active">
+                    <img src="../../assets/home/image1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="col-md-4 carousel-item ">
+                    <img src="../../assets/home/image2.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="col-md-4 carousel-item ">
+                    <img src="../../assets/home/image3.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="col-sm-4 carousel-item ">
+                    <img src="../../assets/home/image4.jpg" class="d-block w-100" alt="Slide 4">
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
             </a>
         </div>
-
-        <div class="row slideanim">
-            <div class="col-sm-4 text-center">
-                <div class="img-container">
-                    <img src="../../assets/spec/accident.jpg" alt="Accident and Trauma">
-                </div>
-                <p>Accident and Trauma</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <div class="img-container">
-                    <img src="../../assets/spec/ent.jpg" alt="ENT">
-                </div>
-                <p>ENT</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <div class="img-container">
-                    <img src="../../assets/spec/cardiac.jpg" alt="Cardiology">
-                </div>
-                <p>Cardiology</p>
-            </div>
-        </div>
-
-        <div class="row slideanim mt-4">
-            <div class="col-sm-4 text-center">
-                <div class="img-container">
-                    <img src="../../assets/spec/neuro.jpg" alt="Neurology">
-                </div>
-                <p>Neurology</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <div class="img-container">
-                    <img src="../../assets/spec/eye.jpg" alt="Ophthalmology">
-                </div>
-                <p>Ophthalmology</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <div class="img-container">
-                    <img src="../../assets/spec/gastro.jpg" alt="Gastrointestinal">
-                </div>
-                <p>Gastrointestinal</p>
-            </div>
-        </div>
+        <!-- Other content can go here -->
     </div>
 
-    <!--Doctors Section-->
-    <div id="doctors" class="container bg-light mt-5 mb-5 text-center">
-        <p class="font-weight-bold" style="font-size: 17px;">OUR DOCTORS</p>
-        <div class="table-responsive">
-            <table id="tableMain" class="table table-borderless" style="font-size: 12px;">
-                <tr>
-                    <td id="data0"></td>
-                    <td id="data1"></td>
-                </tr>
-                <tr>
-                    <td id="data2"></td>
-                    <td id="data3"></td>
-                </tr>
-            </table>
+    <!-- Footer -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up" style="color: #777;"></span>
+        </a><br>
+        <div style="font-size:16px;color: #777;">
+            <a href="../static/feedback.html" style="color: #777;">Feedback</a> |
+            <a href="../static/join.html" style="color:#777;">Join us</a> |
+            <a href="../static/report.html" style="color:#777;">Patient reports</a> |
+            <a href="../login/login.html" style="color:#777;">Login</a>
+            <br />
         </div>
-    </div>
+        <p style="font-size: 12px; color: #777;">&copy; 2017 ETA | UI &amp; Markup, Infosys Limited. All Rights
+            Reserved.</p>
+    </footer>
 
-    <!-- Appointment Section -->
-    <div id="appointment" class="container bg-light pb-3 mb-4 text-center">
-        <p class="font-weight-bold" style="font-size: 17px;">APPOINTMENT</p>
-        <p>Take an appointment online</p>
-        <form name="doc" class="form-inline justify-content-center" onsubmit="proceedAppointment(event)">
-            <div class="form-group">
-                <label for="Location">Location: &nbsp;</label>
-                <select id="Location" class="form-control mr-3" required>
-                    <option value="">--Select--</option>
-                    <option value="Bangalore">Bangalore</option>
-                    <option value="Chennai">Chennai</option>
-                    <option value="Hyderabad">Hyderabad</option>
-                    <option value="Jaipur">Jaipur</option>
-                    <option value="Mangalore">Mangalore</option>
-                    <option value="Mysore">Mysore</option>
-                    <option value="Trivandrum">Trivandrum</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="dpt">Department to visit:&nbsp;</label>
-                <select id="dpt" class="form-control mr-3" required>
-                    <option value="">--Select--</option>
-                    <option value="Dental">Dental</option>
-                    <option value="ENT">ENT</option>
-                    <option value="Physician">Physician</option>
-                    <option value="Ophthalmology">Ophthalmology</option>
-                    <option value="Cardiology">Cardiology</option>
-                    <option value="Neurology">Neurology</option>
-                    <option value="Gastrointestinal">Gastrointestinal</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="dateField">Date :&nbsp;</label>
-                <input id="dateField" type="date" class="form-control mr-3" required />
-            </div>
-            <div class="form-group">
-                <label for="time">Time :&nbsp;</label>
-                <input id="time" type="time" class="form-control" required />
-            </div>
-            <button type="submit" id="submit" class="btn btn-default mt-3" value="Proceed">Proceed</button>
-        </form>
-    </div>
-
-    <!-- Blood bank -->
-    <div id="blood" class="container text-center mb-5 bg-light">
-        <h2 class="font-weight-bold text-left" style="padding-right:250px; font-size:17px;">BLOOD BANK</h2>
-        <div class="row">
-            <div class="col-sm-4">
-                <img src="../../assets/blood_bank.jpg" class="img-fluid" alt="Blood Bank">
-            </div>
-            <div class="col-sm-8 slideanim text-left">
-                <p>Blood is a specialized bodily fluid that delivers necessary substances to the body’s cells such as
-                    nutrients and oxygen, and transports waste products away from those same cells. Blood comprises more
-                    than 8% of the body weight of a healthy individual. On average, every adult person has about 5 to 6
-                    liters of blood. The major component of blood is a fluid called plasma in which are suspended
-                    cellular elements. These are Red Blood Cells or RBCs, White Blood Cells or WBCs, and platelets.</p>
-                <button class="btn btn-default float-right" onclick="bloodAvailability(event)">Check blood
-                    availability</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="../home/homeWithPromise.js"></script>
+    <!-- Scripts -->
+    <script src="../home/home.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

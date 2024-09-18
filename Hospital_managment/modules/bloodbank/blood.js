@@ -40,3 +40,9 @@ window.onload = function () {
   document.getElementById("v11").innerHTML = FP.OPlus;
   document.getElementById("v12").innerHTML = FP.OMinus;
 };
+
+
+function bloodAvailability(event) {
+  event.preventDefault();
+  location.assign("../bloodbank/availability.html");
+}
